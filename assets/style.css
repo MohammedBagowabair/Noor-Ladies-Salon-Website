@@ -286,3 +286,6 @@ html[dir=rtl] .hero-shade{background:linear-gradient(270deg,rgba(30,15,27,.92) 0
 html[lang=ar] .img-cap{letter-spacing:0;font-size:.9rem}
 .shot::before,.sig-photo::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(30,15,27,.55),transparent 40%);pointer-events:none}
 @media (min-width:980px){.shot.g1{grid-column:auto;grid-row:span 2;min-height:auto}.shot.g4{grid-column:span 2}.sig-photo{min-height:680px}}
+.shot.g4{grid-column:span 2;min-height:220px}
+.text-link{flex-wrap:wrap;justify-content:center;row-gap:4px}
+.text-link span{white-space:nowrap}
