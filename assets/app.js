@@ -68,11 +68,17 @@
     hoursL:"ساعات العمل", hours:"يومياً · 10:00 صباحاً – 10:00 مساءً", hoursNote:"قد تتغير المواعيد في رمضان والعطلات الرسمية.",
     phoneL:"الهاتف وواتساب", callNow:"اتصلي", directions:"الاتجاهات",
     finTitle:"يوم شعرك القادم يبدأ برسالة واحدة", finSub:"أخبرينا بالخدمة والوقت المناسب لك، ونؤكد موعدك عبر واتساب.",
-    footName:"صالون نور للسيدات", footAddr:"مطر بلازا · النهدة 1 · دبي", demo:"نسخة تجريبية مُعدّة لصالون نور للسيدات", fab:"واتساب"
+    footName:"صالون نور للسيدات", footAddr:"مطر بلازا · النهدة 1 · دبي", demo:"نسخة تجريبية مُعدّة لصالون نور للسيدات", fab:"واتساب", aiNote:"الصور توضيحية مولّدة بالذكاء الاصطناعي",
+    capSig:"لمعان صحي", capG1:"السشوار والتصفيف", capG2:"صالة الاسترخاء", capG3:"فن الأظافر", capG4:"حناء العرائس",
+    altSig:"شعر داكن طويل لامع وصحي بعد علاج التنعيم", altG1:"مصففة تجفف تموجات شعر كستنائي لامعة",
+    altG2:"صالة صالون هادئة بمقاعد مخملية لؤلؤية ووسائد بلون البرقوق", altG3:"مانيكير بلون اللؤلؤ والأوركيد مع نقوش ذهبية دقيقة",
+    altG4:"حناء العروس على يدين تحملان زهور أوركيد بيضاء مع أساور ذهبية"
   };
   var EN = {};
   var nodes = document.querySelectorAll("[data-i18n]");
   nodes.forEach(function(n){ EN[n.getAttribute("data-i18n")] = n.innerHTML; });
+  var altNodes = document.querySelectorAll("[data-i18n-alt]"); var EN_ALT = {};
+  altNodes.forEach(function(n){ EN_ALT[n.getAttribute("data-i18n-alt")] = n.alt; });
   var toggle = document.getElementById("langToggle");
   function apply(lang){
     var h = document.documentElement;
@@ -82,6 +88,7 @@
       var v = lang === "ar" ? AR[k] : EN[k];
       if (v !== undefined) n.innerHTML = v;
     });
+    altNodes.forEach(function(n){ var k=n.getAttribute("data-i18n-alt"); var v = lang==="ar" ? AR[k] : EN_ALT[k]; if(v) n.alt = v; });
     toggle.textContent = lang === "ar" ? "English" : "العربية";
     toggle.setAttribute("aria-label", lang === "ar" ? "Switch to English" : "التبديل إلى العربية");
     document.title = lang === "ar" ? "صالون نور للسيدات · النهدة، دبي | احجزي عبر واتساب" : "Noor Ladies Salon · Al Nahda, Dubai | Book on WhatsApp";

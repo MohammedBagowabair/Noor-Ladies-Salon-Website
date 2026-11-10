@@ -8,6 +8,7 @@
 <meta name="theme-color" content="#2e1829">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/CormorantGaramond-300-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/img/hero.webp" as="image" type="image/webp">
 <link rel="stylesheet" href="assets/fonts.css">
 <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -33,11 +34,11 @@
 <!-- HERO (full-bleed) -->
 <section class="hero">
   <div class="hero-media" aria-hidden="true">
-    <div class="hero-photo-slot"></div>
+    <img class="hero-img" src="assets/img/hero.webp" width="1920" height="1080" alt="" fetchpriority="high" decoding="async">
+    <div class="hero-shade"></div>
     <div class="rays"></div>
     <svg class="hero-orn" viewBox="0 0 600 600"><use href="#halo"/></svg>
   </div>
-  <span class="ph-tag hero-ph"><svg class="ico"><use href="#camera"/></svg><span data-i18n="phHero">Placeholder · Noor's own hero photo or video, used with permission</span></span>
   <div class="hero-inner wrap">
     <p class="eyebrow reveal"><span class="rule"></span><span data-i18n="eyebrow">Hair &amp; Beauty Lounge · Al Nahda 1, Dubai</span><span class="rule"></span></p>
     <h1 class="reveal d1"><span class="h1-noor" data-i18n="h1a">Noor</span><span class="h1-sub" data-i18n="h1b">Ladies Salon</span></h1>
@@ -78,10 +79,10 @@
 <!-- SIGNATURE -->
 <section class="signature">
   <div class="sig-grid">
-    <div class="sig-photo placeholder reveal">
-      <span class="ph-tag"><svg class="ico"><use href="#camera"/></svg><span data-i18n="phSig">Placeholder · Noor's before / after cysteine photo</span></span>
-      <svg class="sig-lines" viewBox="0 0 200 300" aria-hidden="true"><use href="#strands"/></svg>
-    </div>
+    <figure class="sig-photo reveal">
+      <img src="assets/img/signature.webp" width="750" height="1000" loading="lazy" decoding="async" alt="Long, glossy, healthy-looking dark hair after a smoothing treatment" data-i18n-alt="altSig">
+      <figcaption class="img-cap" data-i18n="capSig">Healthy shine</figcaption>
+    </figure>
     <div class="sig-body reveal d1">
       <p class="kicker light" data-i18n="sigTag">Signature treatment</p>
       <h2 data-i18n="s1">Cysteine &amp; Protein Hair Treatment</h2>
@@ -135,10 +136,10 @@
       <h2 data-i18n="galTitle">The work, in light</h2>
     </header>
     <div class="gallery">
-      <figure class="placeholder g1 reveal"><span class="ph-tag"><svg class="ico"><use href="#camera"/></svg><span data-i18n="ph1">Placeholder · hair transformation</span></span></figure>
-      <figure class="placeholder g2 reveal d1"><span class="ph-tag"><svg class="ico"><use href="#camera"/></svg><span data-i18n="ph2">Placeholder · salon interior</span></span></figure>
-      <figure class="placeholder g3 reveal d2"><span class="ph-tag"><svg class="ico"><use href="#camera"/></svg><span data-i18n="ph3">Placeholder · nail art</span></span></figure>
-      <figure class="placeholder g4 reveal d3"><span class="ph-tag"><svg class="ico"><use href="#camera"/></svg><span data-i18n="ph4">Placeholder · bridal &amp; henna</span></span></figure>
+      <figure class="shot g1 reveal"><img src="assets/img/gallery-hair.webp" width="750" height="1000" loading="lazy" decoding="async" alt="Stylist blow-drying soft, glossy chestnut waves" data-i18n-alt="altG1"><figcaption class="img-cap" data-i18n="capG1">Blow-dry &amp; styling</figcaption></figure>
+      <figure class="shot g2 reveal d1"><img src="assets/img/gallery-lounge.webp" width="1000" height="750" loading="lazy" decoding="async" alt="Calm salon lounge with pearl velvet armchairs and plum cushions" data-i18n-alt="altG2"><figcaption class="img-cap" data-i18n="capG2">The lounge</figcaption></figure>
+      <figure class="shot g3 reveal d2"><img src="assets/img/gallery-nails.webp" width="1000" height="750" loading="lazy" decoding="async" alt="Pearl and orchid manicure with fine gold nail art" data-i18n-alt="altG3"><figcaption class="img-cap" data-i18n="capG3">Nail art</figcaption></figure>
+      <figure class="shot g4 reveal d3"><img src="assets/img/gallery-henna.webp" width="1000" height="562" loading="lazy" decoding="async" alt="Bridal henna on hands holding white orchids, with gold bangles" data-i18n-alt="altG4"><figcaption class="img-cap" data-i18n="capG4">Bridal henna</figcaption></figure>
     </div>
     <p class="center"><a class="text-link" href="https://www.instagram.com/noorladiessalon/" target="_blank" rel="noopener"><svg class="ico"><use href="#ig"/></svg><span data-i18n="igMore">Follow on Instagram</span> <span class="ltr">@noorladiessalon</span></a></p>
   </div>
@@ -200,7 +201,7 @@
   <div class="wrap foot-inner">
     <span class="wm-foot" data-i18n="footName">NOOR LADIES SALON</span>
     <span data-i18n="footAddr">Matar Plaza · Al Nahda 1 · Dubai</span>
-    <span class="demo-note" data-i18n="demo">Demo prepared for Noor Ladies Salon</span>
+    <span class="demo-note"><span data-i18n="demo">Demo prepared for Noor Ladies Salon</span> · <span data-i18n="aiNote">Images are AI-generated illustrations</span></span>
   </div>
 </footer>
 
